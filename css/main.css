@@ -251,7 +251,8 @@ main{
 }
 .juegosLinkSteam:hover{
     animation-name: shake;
-    animation-duration: 0.4s;
+    animation-duration: 0.2s;
+    animation-iteration-count: 2;
     animation-timing-function: linear;
 }
 
@@ -485,13 +486,13 @@ main{
         transform: rotate(0deg);
     }
     25%{
-        transform: rotate(-35deg);
+        transform: rotate(-15deg);
     }
     50%{
         transform: rotate(0deg);
     }
     75%{
-        transform: rotate(35deg);
+        transform: rotate(15deg);
     }
     100%{
         transform: rotate(0deg);
