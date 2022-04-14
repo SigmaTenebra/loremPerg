@@ -159,7 +159,7 @@ main{
 }
 .somos{
     grid-area: somos;
-    background-color: #2A475E;
+    background-image: linear-gradient(to right, black, brown);
     padding: 2rem;
 }
 .somos h2, .somos1 h2{
@@ -170,7 +170,7 @@ main{
 }
 .somos1{
     grid-area: somos1;
-    background-color: #2A475E;
+    background-image: linear-gradient(to right, black, brown);
     padding: 2rem;
 }
 
@@ -199,7 +199,7 @@ main{
 .desarrollador, .desarrollador1, .desarrollador2{
     padding: 1.5rem;
     margin: 2rem;
-    background-color: #2A475E;
+    background-image: linear-gradient(to right, black, brown);
 }
 .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2{
     font-size: 1.2rem;
@@ -208,7 +208,7 @@ main{
     font-size: 0.8rem;
 }
 .desarrollador a, .desarrollador1 a, .desarrollador2 a{
-    color: #000;
+    color: rgb(103, 78, 78);
 }
 
 /*propiedades de contacto*/
@@ -244,7 +244,7 @@ main{
 }
 .game{
     margin: 1rem;
-    background-color: #2A475E;
+    background-image: linear-gradient(to right, black, brown);
     padding: 0.5rem;
 }
 .game h2{
