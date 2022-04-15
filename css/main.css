@@ -237,36 +237,30 @@ main{
 }
 
 /*propiedades de juegos*/
-.juegosTitulo{
-    font-weight: 200;
-    padding: 2rem;
-    font-size: 1.7rem;
+.menu-juego{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
-.game{
-    margin: 1rem;
-    background-image: linear-gradient(to right, black, brown);
-    padding: 0.5rem;
-}
-.game h2{
-    font-size: 1.2rem;
+.juegos-titulo{
     text-align: center;
 }
-.game img{
-    display: block;
-    margin: auto;
+.carta{
+    margin: 0.2rem;
 }
-.game p{
-    font-size: 0.8rem;
-    text-align: center;
+.menu-btn{
+    font-size: 1rem;
+    background-color: brown;
+    border-radius: 2rem;
 }
-.juegosLinkSteam{
-    transform: scale(0.8);
+.pie{
+    grid-area: footer;
+    padding: 1rem;
+    background-color: black;
 }
-.juegosLinkSteam:hover{
-    animation-name: shake;
-    animation-duration: 0.2s;
-    animation-iteration-count: 2;
-    animation-timing-function: linear;
+.pie h3{
+    font-size: 0.4rem;
 }
 
 /*media queries*/
@@ -282,6 +276,9 @@ main{
         font-size: 1rem;
     }
     .foot{
+        font-size: 0.45rem;
+    }
+    .pie h3{
         font-size: 0.45rem;
     }
 
@@ -376,6 +373,9 @@ main{
         font-size: 1.4rem;
     }
     .foot{
+        font-size: 0.6rem;
+    }
+    .pie h3{
         font-size: 0.6rem;
     }
     .redesFb{
