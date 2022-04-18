@@ -4,139 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!--link fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <!--link animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!--Mis estilos-->
     <link rel="stylesheet" href="../css/main.css">
     <title>Juegos - Lorem</title>
 </head>
 <body>
     <div class="base">
         <header id="top">
-        
-            <nav class="menu-juego navbar navbar-expand-lg navbar-light bg-black">
-                <div class="container-fluid hstack gap-5">
-                    <a class="navbar-brand" href="../index.html">
-                        <img src="../img/logo.jpeg" width="100" height="100" alt="Link a home, logo Lorem">
-                    </a>
-                    <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 hstack gap-5">
-                            <li class="nav-item menu-btn">
-                                <a class="nav-link text-light" href="#top">
-                                    Juegos
-                                </a>
-                            </li>
-                            <li class="menu-btn nav-item">
-                                <a class="nav-link text-light" href="desarrolladores.html">
-                                    Desarrolladores
-                                </a>
-                            </li>
-                            <li class="menu-btn nav-item">
-                                <a class="nav-link text-light" href="sobreNosotros.html">
-                                    Sobre Nosotros
-                                </a>
-                            </li>
-                            <li class="menu-btn nav-item">
-                                <a class="nav-link text-light" href="contacto.html">
-                                    Contacto
-                                </a>
-                            </li>
-                    </div>
-                </div>
+            <nav class="menu">
+                <ul>
+                    <li class="logo boton">
+                        <a href="../index.html">
+                            <img src="../img/logo.jpeg" width="100" height="100" alt="Link a home, logo Lorem">
+                        </a>
+                    </li>
+
+                    <li class="up boton">
+                        <a href="#top">
+                            Juegos
+                        </a>
+                    </li>
+
+                    <li class="up1 boton">
+                        <a href="desarrolladores.html">
+                            Desarrolladores
+                        </a>
+                    </li>
+
+                    <li class="down boton">
+                        <a href="sobreNosotros.html">
+                            Sobre Nosotros
+                        </a>
+                    </li>
+
+                    <li class="down1 boton">
+                        <a href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
             </nav>
-        
-            <h1 class="juegos-titulo animate__animated animate__fadeInDown">Lista completa de juegos</h1>
+            <h1 class="juegosTitulo animate__animated animate__fadeInDown">Lista completa de juegos</h1>
         </header>
+
+        <main class="juegosMain">
+            <div class="game">
+                <h2>Dread Hunger</h2>
+                <img src="../img/dreadHungerHeader.jpg"width="300" height="200" alt="Dread Hunger">
+                <p>Ocho jugadores, entre los cuales, dos traidores invocan poderes oscuros para sabotearlos. "Casi hemos cruzado el paso. La tormenta nos pisa los talones y la tripulación habla en susurros sobre magia de sangre y oscura". - Cuaderno de bitácora del capitán, abril de 1847.</p>
+                <a href="https://store.steampowered.com/app/1418630/Dread_Hunger/"target="_blank">
+                    <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
+                </a>
+            </div>
+            
+            <div class="game">
+                <h2>Hades</h2>
+                <img src="../img/hadesHeader.jpg"width="300" height="200" alt="Hades">
+                <p>Desafía al dios de los muertos y protagoniza una salvaje fuga del Inframundo en este juego de exploración de mazmorras de los creadores de Bastion, Transistor y Pyre.</p>
+                <a href="https://store.steampowered.com/app/1145360/Hades/"target="_blank">
+                    <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
+                </a>
+            </div>
         
-        <main class="juegos-main conteiner-fluid">
-        
-            <div class="row justify-content-center" >
-                <div class="carta card bg-black" style="width: 18rem;">
-                    <img src="../img/dreadHungerHeader.jpg" class="card-img-top" width="300" height="200">
-                    <div class="card-body">
-                        <h2 class="card-title">Dread Hunger</h2>
-                        <p class="card-text">Ocho jugadores, entre los cuales, dos traidores invocan poderes oscuros para sabotearlos. "Casi hemos cruzado el paso. La tormenta nos pisa los talones y la tripulación habla en susurros sobre magia de sangre y oscura". - Cuaderno de bitácora del capitán, abril de 1847.</p>
-                        <a href="https://store.steampowered.com/app/1418630/Dread_Hunger/" target="_blank" class="btn">
-                            <img class="juegos-link-steam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
-                        </a>
-                    </div>
-                </div>
+            <div class="game">
+                <h2>Pyre</h2>
+                <img src="../img/pyreHeader.jpg"width="300" height="200" alt="Pyre">
+                <p>Pyre es un RPG por equipos de los creadores de Bastion y Transistor. Conduce a la libertad a una banda de exiliados en una serie de competiciones místicas en el modo campaña o desafía a un amigo a un frenético combate ritual en el modo enfrentamiento.</p>
+                <a href="https://store.steampowered.com/app/462770/Pyre/?curator_clanid=3584665"target="_blank">
+                    <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
+                </a>
+            </div>
+
+            <div class="game">
+                <h2>Bastion</h2>
+                <img src="../img/bastionHeader.jpg"width="300" height="200" alt="Bastion">
+                <p>Explora más de 40 exuberantes entornos mientras desvelas los secretos del Gran Desastre, una catástrofe surrealista que destrozó el mundo haciéndolo pedazos. ¡Termina la historia principal para desbloquear el modo Partida Nueva Plus y continuar tu viaje!</p>
+                <a href="https://store.steampowered.com/app/107100/Bastion/?curator_clanid=3584665"target="_blank">
+                    <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
+                </a>
+            </div>
                 
-                <div class="carta card bg-black" style="width: 18rem;">
-                    <img src="../img/hadesHeader.jpg" class="card-img-top" width="300" height="200">
-                    <div class="card-body">
-                        <h2 class="card-title">Hades</h2>
-                        <p class="card-text">Desafía al dios de los muertos y protagoniza una salvaje fuga del Inframundo en este juego de exploración de mazmorras de los creadores de Bastion, Transistor y Pyre.</p>
-                        <a href="https://store.steampowered.com/app/1145360/Hades/"target="_blank" class="btn ">
-                            <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="carta card bg-black" style="width: 18rem;">
-                    <img src="../img/pyreHeader.jpg" class="card-img-top" width="300" height="200">
-                    <div class="card-body">
-                        <h2 class="card-title">Pyre</h2>
-                        <p class="card-text">Pyre es un RPG por equipos de los creadores de Bastion y Transistor. Conduce a la libertad a una banda de exiliados en una serie de competiciones místicas en el modo campaña o desafía a un amigo a un frenético combate ritual en el modo enfrentamiento.</p>
-                        <a href="https://store.steampowered.com/app/462770/Pyre/?curator_clanid=3584665"target="_blank" class="btn ">
-                            <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="carta card bg-black" style="width: 18rem;">
-                    <img src="../img/bastionHeader.jpg" alt="Bastion" class="card-img-top" width="300" height="200">
-                    <div class="card-body">
-                        <h2 class="card-title">Bastion</h2>
-                        <p class="card-text">Explora más de 40 exuberantes entornos mientras desvelas los secretos del Gran Desastre, una catástrofe surrealista que destrozó el mundo haciéndolo pedazos. ¡Termina la historia principal para desbloquear el modo Partida Nueva Plus y continuar tu viaje!</p>
-                        <a href="https://store.steampowered.com/app/107100/Bastion/?curator_clanid=3584665"target="_blank" class="btn ">
-                            <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="carta card bg-black" style="width: 18rem;">
-                    <img src="../img/transistorHeader.jpg" class="card-img-top" width="300" height="200">
-                    <div class="card-body">
-                        <h2 class="card-title">Transistor</h2>
-                        <p class="card-text">Transistor es un juego de rol que te invita a blandir un arma extraordinaria de origen desconocido para luchar a lo largo de una espectacular ciudad futurista. En el transcurso de la aventura, irás desentrañando los misterios de la Transistor mientras vas en busca de sus anteriores propietarios.</p>
-                        <a href="https://store.steampowered.com/app/237930/Transistor/?curator_clanid=3584665"target="_blank" class="btn ">
-                            <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="carta card bg-black" style="width: 18rem;">
-                    <img src="../img/hollowKnightHeader.jpg" class="card-img-top" width="300" height="200">
-                    <div class="card-body">
-                        <h2 class="card-title">Hollow Knight</h2>
-                        <p class="card-text">Hollow Knight es una aventura de acción clásica en 2D ambientada en un vasto mundo interconectado. Explora cavernas tortuosas, ciudades antiguas y páramos mortales. Combate contra criaturas corrompidas, haz amistad con extraños insectos y resuelve los antiguos misterios que yacen en el corazón de reino.</p>
-                        <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank" class="btn ">
-                            <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
-                        </a>
-                    </div>
-                </div>
-            </div class="col-auto" >
-        
+            <div class="game">
+                <h2>Transistor</h2>
+                <img src="../img/transistorHeader.jpg"width="300" height="200" alt="Transistor">
+                <p>Transistor es un juego de rol que te invita a blandir un arma extraordinaria de origen desconocido para luchar a lo largo de una espectacular ciudad futurista. En el transcurso de la aventura, irás desentrañando los misterios de la Transistor mientras vas en busca de sus anteriores propietarios.</p>
+                <a href="https://store.steampowered.com/app/237930/Transistor/?curator_clanid=3584665"target="_blank">
+                    <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
+                </a>
+            </div>
+            
+            <div class="game">
+                <h2>Hollow Knight</h2>
+                <img src="../img/hollowKnightHeader.jpg"width="300" height="200" alt="Hollow Knight">
+                <p>Hollow Knight es una aventura de acción clásica en 2D ambientada en un vasto mundo interconectado. Explora cavernas tortuosas, ciudades antiguas y páramos mortales. Combate contra criaturas corrompidas, haz amistad con extraños insectos y resuelve los antiguos misterios que yacen en el corazón de reino.</p>
+                <a href="https://store.steampowered.com/app/367520/Hollow_Knight/"target="_blank">
+                    <img class="juegosLinkSteam" src="../img/steamLogo.png"width="50" height="50" alt="logo de steam">
+                </a> 
+            </div>    
         </main>
-        
-        <footer class="pie">
-            <h3 class="fs-6">Todos los derechos reservados <br>Diseñado por perg.bruno.mereles@gmail.com</h3>
+
+        <footer class="foot">
+            <h3>Todos los derechos reservados</h3>
+            <h3>Diseñado por perg.bruno.mereles@gmail.com</h3>
             <img class="redesFb" src="../img/fbLogo.png" width="50" height="50" alt="logo facebook">
             <img class="redesInsta" src="../img/instaLogo.png" width="50" height="50" alt="logo Instagram">
         </footer>
     </div>
-
-    <!--link js-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
