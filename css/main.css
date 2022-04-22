@@ -1,513 +1,412 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Grenze Gotisch', cursive;
-    color: gainsboro;
-}
+/*animaciones*/
+@keyframes latir {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
 
-/*propiedades compartidas por todas las paginas*/
-.base{
-    height: 100vh;
-    display: grid;
-    grid-template-areas: "head"
-                        "main"
-                        "footer";
-    grid-template-rows: auto auto 4rem;
-}
-header{
-    padding-top: 8rem;
-    background-color: brown;
-    grid-area: head;
-}
-.menu{
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-}
-.menu ul{
-    display: grid;
-    grid-template-areas: "logo up up1"
-                        "logo down down1";
-    justify-content: center;
-}
-.logo{
-    grid-area: logo;
-}
-.up a, .up1 a, .down a, .down1 a{
-    font-size: 0.8rem;
-}
-.up{
-    grid-area: up;
-}
-.down{
-    grid-area: down;
-}
-.up1{
-    grid-area: up1;
-}
-.down1{
-    grid-area: down1;
-}
-.boton{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.4rem;
-}
-.boton a{
-    text-decoration: none;
-}
-.up a, .up1 a, .down a, .down1 a{
-    padding: 0.4rem;
-    border-radius: 3rem;
-    background-color: brown;
-    color: rgba(255, 255, 255, 0.832);
-}
-.boton:hover{
-    transform: scale(1.2);
-    transition: 0.7s;
-}
-main{
-    grid-area: main;
-    background-image: linear-gradient(to bottom, brown, black);
-}
-.foot{
-    grid-area: footer;
-    padding: 1rem;
-    background-color: black;
-    font-size: 0.4rem;
-}
-.redesFb{
-    position: fixed;
-    bottom: 2rem;
-    right: 1rem;
-    height: 2.5rem;
-    width: 2.5rem;
-}
-.redesInsta{
-    position: fixed;
-    bottom: 5rem;
-    right: 1rem;
-    height: 2.5rem;
-    width: 2.5rem;
-}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-15deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(15deg); }
+  100% {
+    transform: rotate(0deg); } }
 
-/*propiedades index*/
-.indexTitulo{
-    font-weight: 200;
-    padding: 1rem;
-    font-size: 1.7rem;
-    text-align: center;
-}
-.indexLogo{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-}
-.indexLogo img{
-    border-radius: 1rem;
-    width: 10rem;
-    height: 10rem;
-    animation-name: latir;
-    animation-iteration-count: infinite;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-}
-.indexMain{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.indexSubtitulo{
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-align: center;
-}
+/*propiedades del index*/
+.indexTitulo {
+  font-weight: 200;
+  padding: 1rem;
+  font-size: 1.7rem;
+  text-align: center; }
+
+.indexLogo {
+  display: flex;
+  justify-content: center;
+  padding: 1rem; }
+
+.indexLogo img {
+  border-radius: 1rem;
+  width: 10rem;
+  height: 10rem;
+  animation-name: latir;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+  animation-timing-function: linear; }
+
+.indexMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.indexSubtitulo {
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: center; }
+
 .indexParrafo {
-    font-size: 0.8rem;
-    padding: 1rem;
-    text-align: center;
-}
-.indexVideo{
-    width: 90%;
-    height: 0;
-    padding-bottom: 60%;
-    position: relative;
-}
-.indexVideo iframe{
-    position: absolute;
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-align: center; }
+
+.indexVideo {
+  width: 90%;
+  height: 0;
+  padding-bottom: 60%;
+  position: relative; }
+
+.indexVideo iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+@media only screen and (min-width: 600px) {
+  .indexTitulo {
+    font-size: 1.9rem; }
+  .indexLogo img {
+    width: 15rem;
+    height: 15rem; }
+  .indexSubtitulo {
+    font-size: 1.4rem; }
+  .indexParrafo {
+    font-size: 1rem;
+    text-align: center; } }
+
+@media only screen and (min-width: 1200px) {
+  .indexTitulo {
+    font-size: 2.5rem; }
+  .indexLogo img {
+    width: 20rem;
+    height: 20rem; }
+  .indexMain {
+    height: 70vh;
+    display: grid;
+    grid-template-areas: "subt vid" "p vid";
+    grid-template-columns: 70vh auto; }
+  .indexSubtitulo {
+    grid-area: subt;
+    font-size: 1.9rem;
+    align-self: center; }
+  .indexParrafo {
+    grid-area: p;
+    align-self: start;
+    font-size: 1.5rem;
+    text-align: center; }
+  .indexVideo {
+    grid-area: vid;
+    width: 97%;
+    height: 90%;
+    padding-bottom: 0; }
+  .indexVideo iframe {
+    position: inherit;
     width: 100%;
-    height: 100%;
-}
+    height: 100%; } }
 
 /*propiedades somos*/
-.somosTitulo{
-    font-weight: 200;
-    padding-left: 2rem;
-    font-size: 1.7rem;
-}
-.somosMain{
-    padding: 2rem;
-    display: grid;
-    grid-template-areas: "somos"
-                        "somos1";
-    align-items: center;
-}
-.somos{
-    grid-area: somos;
-    background-image: linear-gradient(to right, black, brown);
-    padding: 2rem;
-}
-.somos h2, .somos1 h2{
-    font-size: 1.2rem;
-}
-.somos p, .somos1 p{
-    font-size: 0.8rem;
-}
-.somos1{
-    grid-area: somos1;
-    background-image: linear-gradient(to right, black, brown);
-    padding: 2rem;
-}
+.somosTitulo {
+  font-weight: 200;
+  padding-left: 2rem;
+  font-size: 1.7rem; }
 
-/*propiedades de desarrolladores*/
-.desarrolladoresTitulo{
-    font-weight: 200;
-    padding: 2rem;
-    font-size: 1.7rem;
-}
-.desarrolladoresMain{
-    display: grid;
-    grid-template-areas: "desa"
-                        "desa1"
-                        "desa2";
-    align-items: center;
-}
-.desarrollador{
-    grid-area: desa;
-}
-.desarrollador1{
-    grid-area: desa1;
-}
-.desarrollador2{
-    grid-area: desa2;
-}
-.desarrollador, .desarrollador1, .desarrollador2{
-    padding: 1.5rem;
-    margin: 2rem;
-    background-image: linear-gradient(to right, black, brown);
-}
-.desarrollador h2, .desarrollador1 h2, .desarrollador2 h2{
-    font-size: 1.2rem;
-}
-.desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a{
-    font-size: 0.8rem;
-}
-.desarrollador a, .desarrollador1 a, .desarrollador2 a{
-    color: rgb(103, 78, 78);
-}
+.somosMain {
+  padding: 2rem;
+  display: grid;
+  grid-template-areas: "somos" "somos1";
+  align-items: center; }
 
-/*propiedades de contacto*/
-.contactoTitulo{
-    font-weight: 200;
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.7rem;
-}
-.formulario{
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-    padding: 0.5rem;
-}
-.contactoSubtitulo{
-    font-style: oblique;
-    font-size: 1.4rem;
-    padding: 0.3rem;
-}
-.formPadre div{
-    padding: 0.3rem;
-}
-.formPadre div label{
-    font-size: 1.2rem;
-}
+.somos {
+  grid-area: somos;
+  background-image: linear-gradient(to right, black, brown);
+  padding: 2rem; }
+
+.somos h2, .somos1 h2 {
+  font-size: 1.2rem; }
+
+.somos p, .somos1 p {
+  font-size: 0.8rem; }
+
+.somos1 {
+  grid-area: somos1;
+  background-image: linear-gradient(to right, black, brown);
+  padding: 2rem; }
+
+@media only screen and (min-width: 600px) {
+  .somosTitulo {
+    font-size: 1.9rem; }
+  .somos h2, .somos1 h2 {
+    font-size: 1.4rem; }
+  .somos p, .somos1 p {
+    font-size: 1rem; } }
+
+@media only screen and (min-width: 1200px) {
+  .somosTitulo {
+    font-size: 2.5rem; }
+  .somos h2, .somos1 h2 {
+    font-size: 1.9rem; }
+  .somos p, .somos1 p {
+    font-size: 1.5rem; } }
 
 /*propiedades de juegos*/
-.juegosTitulo{
-    font-weight: 200;
-    padding: 2rem;
-    font-size: 1.7rem;
-}
-.game{
-    margin: 1rem;
-    background-image: linear-gradient(to right, black, brown);
-    padding: 0.5rem;
-}
-.game h2{
+.juegosTitulo {
+  font-weight: 200;
+  padding: 2rem;
+  font-size: 1.7rem; }
+
+.game {
+  margin: 1rem;
+  background-image: linear-gradient(to right, black, brown);
+  padding: 0.5rem; }
+  .game h2 {
     font-size: 1.2rem;
-    text-align: center;
-}
-.game img{
+    text-align: center; }
+  .game img {
     display: block;
-    margin: auto;
-}
-.game p{
+    margin: auto; }
+  .game p {
     font-size: 0.8rem;
-    text-align: center;
-}
-.juegosLinkSteam{
-    transform: scale(0.8);
-}
-.juegosLinkSteam:hover{
-    animation-name: shake;
-    animation-duration: 0.2s;
-    animation-iteration-count: 2;
-    animation-timing-function: linear;
-}
+    text-align: center; }
+  .game a .juegosLinkSteam {
+    transform: scale(0.8); }
+    .game a .juegosLinkSteam:hover {
+      animation-name: shake;
+      animation-duration: 0.2s;
+      animation-iteration-count: 2;
+      animation-timing-function: linear; }
 
-/*media queries*/
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
+  .juegosTitulo {
+    font-size: 1.9rem; }
+  .juegosMain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .game {
+    width: 30rem;
+    display: grid;
+    grid-template-areas: "top top" "p img" "img1 img"; }
+  .game h2 {
+    grid-area: top;
+    font-size: 1.4rem; }
+  .game p {
+    grid-area: p;
+    font-size: 0.9rem; }
+  .game img {
+    grid-area: img; }
+  .game a {
+    grid-area: img1; } }
 
-    /*propiedades compartidas por todas las paginas*/
-    .menu ul{
+@media only screen and (min-width: 1200px) {
+  .juegosTitulo {
+    font-size: 2.5rem; }
+  .juegosMain {
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: space-evenly; }
+  .game {
+    width: 33rem; }
+    .game h2 {
+      font-size: 1.9rem; }
+    .game p {
+      font-size: 1rem; } }
+
+/*propiedades de desarrolladores*/
+.desarrolladoresTitulo {
+  font-weight: 200;
+  padding: 2rem;
+  font-size: 1.7rem; }
+
+.desarrolladoresMain {
+  display: grid;
+  grid-template-areas: "desa" "desa1" "desa2";
+  align-items: center; }
+
+.desarrollador {
+  grid-area: desa; }
+
+.desarrollador1 {
+  grid-area: desa1; }
+
+.desarrollador2 {
+  grid-area: desa2; }
+
+.desarrollador, .desarrollador1, .desarrollador2 {
+  padding: 1.5rem;
+  margin: 2rem;
+  background-image: linear-gradient(to right, black, brown); }
+
+.desarrollador h2, .desarrollador1 h2, .desarrollador2 h2 {
+  font-size: 1.2rem; }
+
+.desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a {
+  font-size: 0.8rem; }
+
+.desarrollador a, .desarrollador1 a, .desarrollador2 a {
+  color: #674e4e; }
+
+@media only screen and (min-width: 600px) {
+  .desarrolladoresTitulo {
+    font-size: 1.9rem; }
+  .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2 {
+    font-size: 1.4rem; }
+  .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a {
+    font-size: 1rem; } }
+
+@media only screen and (min-width: 1200px) {
+  .desarrolladoresTitulo {
+    font-size: 2.5rem; }
+  .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2 {
+    font-size: 1.9rem; }
+  .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a {
+    font-size: 1.5rem; } }
+
+/*propiedades de contacto*/
+.contactoTitulo {
+  font-weight: 200;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.7rem; }
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  padding: 0.5rem; }
+
+.contactoSubtitulo {
+  font-style: oblique;
+  font-size: 1.4rem;
+  padding: 0.3rem; }
+
+.formPadre div {
+  padding: 0.3rem; }
+
+.formPadre div label {
+  font-size: 1.2rem; }
+
+@media only screen and (min-width: 600px) {
+  .contactoTitulo {
+    font-size: 1.9rem; }
+  .contactoSubtitulo {
+    font-size: 1.7rem; }
+  .formPadre div label {
+    font-size: 1.4rem; } }
+
+@media only screen and (min-width: 1200px) {
+  .contactoTitulo {
+    font-size: 2.5rem; }
+  .contactoSubtitulo {
+    font-size: 2rem; }
+  .formPadre div label {
+    font-size: 1.7rem; } }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Grenze Gotisch', cursive;
+  color: gainsboro; }
+
+/*propiedades compartidas por todas las paginas*/
+.base {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "head" "main" "footer";
+  grid-template-rows: auto auto 4rem; }
+  .base header {
+    padding-top: 8rem;
+    background-color: brown;
+    grid-area: head; }
+    .base header .menu {
+      width: 100%;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      z-index: 1; }
+      .base header .menu ul {
         display: grid;
-        grid-template-areas: "logo up up1 down down1";
-        justify-content: space-evenly;
-    }
-    .up a, .up1 a, .down a, .down1 a{
-        font-size: 1rem;
-    }
-    .foot{
-        font-size: 0.45rem;
-    }
+        grid-template-areas: "logo up up1" "logo down down1";
+        justify-content: center; }
+        .base header .menu ul .logo {
+          grid-area: logo; }
+        .base header .menu ul .up {
+          grid-area: up; }
+        .base header .menu ul .down {
+          grid-area: down; }
+        .base header .menu ul .up1 {
+          grid-area: up1; }
+        .base header .menu ul .down1 {
+          grid-area: down1; }
+        .base header .menu ul .up a, .base header .menu ul .up1 a, .base header .menu ul .down a, .base header .menu ul .down1 a {
+          padding: 0.4rem;
+          border-radius: 3rem;
+          background-color: brown;
+          color: rgba(255, 255, 255, 0.832); }
+        .base header .menu ul .boton {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.4rem; }
+          .base header .menu ul .boton a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 0.4rem; }
+          .base header .menu ul .boton:hover {
+            transform: scale(1.2);
+            transition: 0.7s; }
+  .base main {
+    grid-area: main;
+    background-image: linear-gradient(to bottom, brown, black); }
+  .base footer {
+    grid-area: footer;
+    padding: 1rem;
+    background-color: black; }
+    .base footer h3 {
+      font-size: 0.4rem; }
+    .base footer .redesFb {
+      position: fixed;
+      bottom: 2rem;
+      right: 1rem;
+      height: 2.5rem;
+      width: 2.5rem; }
+    .base footer .redesInsta {
+      position: fixed;
+      bottom: 5rem;
+      right: 1rem;
+      height: 2.5rem;
+      width: 2.5rem; }
 
-    /*propiedades del index*/
-    .indexTitulo{
-        font-size: 1.9rem;
-    }
-    .indexLogo img{
-        width: 15rem;
-        height: 15rem;
-    }
-    .indexSubtitulo{
-        font-size: 1.4rem;
-    }
-    .indexParrafo {
-        font-size: 1rem;
-        text-align: center;
-    }
-    /*propiedades de somos*/
-    .somosTitulo{
-        font-size: 1.9rem;
-    }
-    .somos h2, .somos1 h2{
-        font-size: 1.4rem;
-    }
-    .somos p, .somos1 p{
-        font-size: 1rem;
-    }
+@media only screen and (min-width: 600px) {
+  .base header .menu ul {
+    display: grid;
+    grid-template-areas: "logo up up1 down down1";
+    justify-content: space-evenly; }
+    .base header .menu ul .up a, .base header .menu ul .up1 a, .base header .menu ul .down a, .base header .menu ul .down1 a {
+      font-size: 1rem; }
+  .base footer h3 {
+    font-size: 0.5rem; } }
 
-    /*propiedades de desarrolladores*/
-    .desarrolladoresTitulo{
-        font-size: 1.9rem;
-    }
-    .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2{
-        font-size: 1.4rem;
-    }
-    .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a{
-        font-size: 1rem;
-    }
-
-    /*propiedades de contacto*/
-    .contactoTitulo{
-        font-size: 1.9rem;
-    }
-    .contactoSubtitulo{
-        font-size: 1.7rem;
-    }
-    .formPadre div label{
-        font-size: 1.4rem;
-    }
-
-    /*propiedades de juegos*/
-    .juegosTitulo{
-        font-size: 1.9rem;
-    }
-    .juegosMain{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    .game{
-        width: 30rem;
-        display: grid;
-        grid-template-areas: "top top"
-                            "p img"
-                            "img1 img";
-    }
-    .game h2{
-        grid-area: top;
-        font-size: 1.4rem;
-    }
-    .game p{
-        grid-area: p;
-        font-size: 0.9rem;
-    }
-    .game img{
-        grid-area: img;
-    }
-    .game a{
-        grid-area: img1;
-    }
-}
-
-@media only screen and (min-width: 1200px){
-
-    /*propiedades compartidas por todas las paginas*/
-    .menu ul{
-        justify-content: space-around;
-    }
-    .up a, .up1 a, .down a, .down1 a{
-        font-size: 1.4rem;
-    }
-    .foot{
-        font-size: 0.6rem;
-    }
-    .redesFb{
-        bottom: 2rem;
-        right: 2rem;
-        height: 3rem;
-        width: 3rem;
-    }
-    .redesInsta{
-        bottom: 6rem;
-        right: 2rem;
-        height: 3rem;
-        width: 3rem;
-    }
-
-    /*propiedades del index*/
-    .indexTitulo{
-        font-size: 2.5rem;
-    }
-    .indexLogo img{
-        width: 20rem;
-        height: 20rem;
-    }
-    .indexMain{
-        height: 70vh;
-        display: grid;
-        grid-template-areas: "subt vid"
-                            "p vid";
-        grid-template-columns: 70vh auto;
-    }
-    .indexSubtitulo{
-        grid-area: subt;
-        font-size: 1.9rem;
-        align-self: center;
-    }
-    .indexParrafo {
-        grid-area: p;
-        align-self: start;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .indexVideo{
-        grid-area: vid;
-        width: 97%;
-        height: 90%;
-        padding-bottom: 0;
-    }
-    .indexVideo iframe{
-        position: inherit;
-        width: 100%;
-        height: 100%;
-    }
-
-    /*propiedades de somos*/
-    .somosTitulo{
-        font-size: 2.5rem;
-    }
-    .somos h2, .somos1 h2{
-        font-size: 1.9rem;
-    }
-    .somos p, .somos1 p{
-        font-size: 1.5rem;
-    }
-
-    /*propiedades de desarrolladores*/
-    .desarrolladoresTitulo{
-        font-size: 2.5rem;
-    }
-    .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2{
-        font-size: 1.9rem;
-    }
-    .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a{
-        font-size: 1.5rem;
-    }
-
-    /*propiedades de contacto*/
-    .contactoTitulo{
-        font-size: 2.5rem;
-    }
-    .contactoSubtitulo{
-        font-size: 2rem;
-    }
-    .formPadre div label{
-        font-size: 1.7rem;
-    }
-
-    /*propiedades de juegos*/
-    .juegosTitulo{
-        font-size: 2.5rem;
-    }
-    .juegosMain{
-        display: flex;
-        flex-flow: row, wrap;
-        justify-content: space-evenly;
-    }
-    .game{
-        width: 33rem;
-    }
-    .game h2{
-        font-size: 1.9rem;
-    }
-    .game p{
-        font-size: 1rem;
-    }
-}
-
-/*animaciones*/
-@keyframes latir{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.1);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-@keyframes shake{
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(-15deg);
-    }
-    50%{
-        transform: rotate(0deg);
-    }
-    75%{
-        transform: rotate(15deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
+@media only screen and (min-width: 1200px) {
+  .base header .menu ul {
+    justify-content: space-around; }
+    .base header .menu ul .up a, .base header .menu ul .up1 a, .base header .menu ul .down a, .base header .menu ul .down1 a {
+      font-size: 1.4rem; }
+  .base footer h3 {
+    font-size: 0.6rem; }
+  .base footer .redesFb {
+    bottom: 2rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem; }
+  .base footer .redesInsta {
+    bottom: 6rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem; } }

@@ -1,0 +1,60 @@
+/*propiedades de desarrolladores*/
+.desarrolladoresTitulo{
+    font-weight: 200;
+    padding: 2rem;
+    font-size: 1.7rem;
+}
+.desarrolladoresMain{
+    display: grid;
+    grid-template-areas: "desa"
+                        "desa1"
+                        "desa2";
+    align-items: center;
+}
+.desarrollador{
+    grid-area: desa;
+}
+.desarrollador1{
+    grid-area: desa1;
+}
+.desarrollador2{
+    grid-area: desa2;
+}
+.desarrollador, .desarrollador1, .desarrollador2{
+    padding: 1.5rem;
+    margin: 2rem;
+    background-image: linear-gradient(to right, black, brown);
+}
+.desarrollador h2, .desarrollador1 h2, .desarrollador2 h2{
+    font-size: 1.2rem;
+}
+.desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a{
+    font-size: 0.8rem;
+}
+.desarrollador a, .desarrollador1 a, .desarrollador2 a{
+    color: rgb(103, 78, 78);
+}
+
+@media only screen and (min-width: 600px){
+    .desarrolladoresTitulo{
+        font-size: 1.9rem;
+    }
+    .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2{
+        font-size: 1.4rem;
+    }
+    .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .desarrolladoresTitulo{
+        font-size: 2.5rem;
+    }
+    .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2{
+        font-size: 1.9rem;
+    }
+    .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a{
+        font-size: 1.5rem;
+    }
+}

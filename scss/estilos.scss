@@ -1,0 +1,160 @@
+@import "utilities/variables";
+@import "utilities/animations";
+@import "styles/index";
+@import "styles/sobreNosotros";
+@import "styles/juegos";
+@import "styles/desarrolladores";
+@import "styles/contacto";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Grenze Gotisch', cursive;
+    color: gainsboro;
+}
+/*propiedades compartidas por todas las paginas*/
+.base{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "head"
+                        "main"
+                        "footer";
+    grid-template-rows: auto auto 4rem;
+    header{
+        padding-top: 8rem;
+        background-color: brown;
+        grid-area: head;
+        .menu{
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            ul{
+                display: grid;
+                grid-template-areas: "logo up up1"
+                                    "logo down down1";
+                justify-content: center;
+                .logo{
+                    grid-area: logo;
+                }
+                .up{
+                    grid-area: up;
+                }
+                .down{
+                    grid-area: down;
+                }
+                .up1{
+                    grid-area: up1;
+                }
+                .down1{
+                    grid-area: down1;
+                }
+                .up a, .up1 a, .down a, .down1 a{
+                    padding: 0.4rem;
+                    border-radius: 3rem;
+                    background-color: brown;
+                    color: rgba(255, 255, 255, 0.832);
+                }
+                .boton{
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0.4rem;
+                    a{
+                        text-decoration: none;
+                        font-size: 0.8rem;
+                        padding: 0.4rem;
+                    }
+                    &:hover{
+                        transform: scale(1.2);
+                        transition: 0.7s;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        grid-area: main;
+        background-image: linear-gradient(to bottom, brown, black);
+    }
+    footer{
+        grid-area: footer;
+        padding: 1rem;
+        background-color: black;
+        h3{
+            font-size: 0.4rem;
+        }
+        .redesFb{
+            position: fixed;
+            bottom: 2rem;
+            right: 1rem;
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+        .redesInsta{
+            position: fixed;
+            bottom: 5rem;
+            right: 1rem;
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .base{
+        header{
+            .menu{
+                ul{
+                    display: grid;
+                    grid-template-areas: "logo up up1 down down1";
+                    justify-content: space-evenly;
+                    .up a, .up1 a, .down a, .down1 a{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        footer{
+            h3{
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1200px){
+    .base{
+        header{
+            .menu{
+                ul{
+                    justify-content: space-around;
+                    .up a, .up1 a, .down a, .down1 a{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        footer{
+            h3{
+                font-size: 0.6rem;
+            }
+            .redesFb{
+                bottom: 2rem;
+                right: 2rem;
+                height: 3rem;
+                width: 3rem;
+            }
+            .redesInsta{
+                bottom: 6rem;
+                right: 2rem;
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+    }
+}

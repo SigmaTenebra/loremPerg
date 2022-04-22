@@ -1,0 +1,48 @@
+/*propiedades de contacto*/
+.contactoTitulo{
+    font-weight: 200;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.7rem;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.contactoSubtitulo{
+    font-style: oblique;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+}
+.formPadre div{
+    padding: 0.3rem;
+}
+.formPadre div label{
+    font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 600px){
+    .contactoTitulo{
+        font-size: 1.9rem;
+    }
+    .contactoSubtitulo{
+        font-size: 1.7rem;
+    }
+    .formPadre div label{
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .contactoTitulo{
+        font-size: 2.5rem;
+    }
+    .contactoSubtitulo{
+        font-size: 2rem;
+    }
+    .formPadre div label{
+        font-size: 1.7rem;
+    }
+}

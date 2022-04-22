@@ -1,0 +1,87 @@
+/*propiedades de juegos*/
+.juegosTitulo{
+    font-weight: 200;
+    padding: 2rem;
+    font-size: 1.7rem;
+}
+.game{
+    margin: 1rem;
+    background-image: linear-gradient(to right, black, brown);
+    padding: 0.5rem;
+    h2{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    img{
+        display: block;
+        margin: auto;
+    }
+    p{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    a{
+        .juegosLinkSteam{
+            transform: scale(0.8);
+            &:hover{
+                animation-name: shake;
+                animation-duration: 0.2s;
+                animation-iteration-count: 2;
+                animation-timing-function: linear;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .juegosTitulo{
+        font-size: 1.9rem;
+    }
+    .juegosMain{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .game{
+        width: 30rem;
+        display: grid;
+        grid-template-areas: "top top"
+                            "p img"
+                            "img1 img";
+    }
+    .game h2{
+        grid-area: top;
+        font-size: 1.4rem;
+    }
+    .game p{
+        grid-area: p;
+        font-size: 0.9rem;
+    }
+    .game img{
+        grid-area: img;
+    }
+    .game a{
+        grid-area: img1;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .juegosTitulo{
+        font-size: 2.5rem;
+    }
+    .juegosMain{
+        display: flex;
+        flex-flow: row, wrap;
+        justify-content: space-evenly;
+    }
+    .game{
+        width: 33rem;
+        h2{
+            font-size: 1.9rem;
+        }
+        p{
+        font-size: 1rem;
+        }
+    }
+}

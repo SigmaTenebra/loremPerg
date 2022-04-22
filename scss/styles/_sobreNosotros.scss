@@ -1,0 +1,53 @@
+/*propiedades somos*/
+.somosTitulo{
+    font-weight: 200;
+    padding-left: 2rem;
+    font-size: 1.7rem;
+}
+.somosMain{
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: "somos"
+                        "somos1";
+    align-items: center;
+}
+.somos{
+    grid-area: somos;
+    background-image: linear-gradient(to right, black, brown);
+    padding: 2rem;
+}
+.somos h2, .somos1 h2{
+    font-size: 1.2rem;
+}
+.somos p, .somos1 p{
+    font-size: 0.8rem;
+}
+.somos1{
+    grid-area: somos1;
+    background-image: linear-gradient(to right, black, brown);
+    padding: 2rem;
+}
+
+@media only screen and (min-width: 600px){
+    .somosTitulo{
+        font-size: 1.9rem;
+    }
+    .somos h2, .somos1 h2{
+        font-size: 1.4rem;
+    }
+    .somos p, .somos1 p{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .somosTitulo{
+        font-size: 2.5rem;
+    }
+    .somos h2, .somos1 h2{
+        font-size: 1.9rem;
+    }
+    .somos p, .somos1 p{
+        font-size: 1.5rem;
+    }
+}
