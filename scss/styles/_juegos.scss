@@ -1,13 +1,11 @@
 /*propiedades de juegos*/
 .juegosTitulo{
-    font-weight: 200;
-    padding: 2rem;
-    font-size: 1.7rem;
+    @include tituloMobile;
 }
 .game{
-    margin: 1rem;
-    background-image: linear-gradient(to right, black, brown);
-    padding: 0.5rem;
+    margin: map-get($map: $card, $key: m);
+    background-image: map-get($map: $card, $key: bg);
+    padding: map-get($map: $card, $key: p);
     h2{
         font-size: 1.2rem;
         text-align: center;
@@ -35,7 +33,7 @@
 
 @media only screen and (min-width: 600px){
     .juegosTitulo{
-        font-size: 1.9rem;
+        font-size: nth($size , 1) - 0.1;
     }
     .juegosMain{
         display: flex;
@@ -52,11 +50,11 @@
     }
     .game h2{
         grid-area: top;
-        font-size: 1.4rem;
+        font-size: nth($size , 2);
     }
     .game p{
         grid-area: p;
-        font-size: 0.9rem;
+        font-size: nth($size , 3);
     }
     .game img{
         grid-area: img;
@@ -68,7 +66,7 @@
 
 @media only screen and (min-width: 1200px){
     .juegosTitulo{
-        font-size: 2.5rem;
+        font-size: nth($size , 4);
     }
     .juegosMain{
         display: flex;
@@ -78,10 +76,10 @@
     .game{
         width: 33rem;
         h2{
-            font-size: 1.9rem;
+            font-size: nth($size , 5);
         }
         p{
-        font-size: 1rem;
+        font-size: nth($size , 6);
         }
     }
 }

@@ -1,3 +1,9 @@
+.base footer .redesFb, .base footer .redesInsta {
+  position: fixed;
+  right: 1rem;
+  height: 2.5rem;
+  width: 2.5rem; }
+
 /*animaciones*/
 @keyframes latir {
   0% {
@@ -22,7 +28,7 @@
 /*propiedades del index*/
 .indexTitulo {
   font-weight: 200;
-  padding: 1rem;
+  padding: 2rem;
   font-size: 1.7rem;
   text-align: center; }
 
@@ -75,7 +81,7 @@
   .indexSubtitulo {
     font-size: 1.4rem; }
   .indexParrafo {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center; } }
 
 @media only screen and (min-width: 1200px) {
@@ -96,7 +102,7 @@
   .indexParrafo {
     grid-area: p;
     align-self: start;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center; }
   .indexVideo {
     grid-area: vid;
@@ -111,7 +117,7 @@
 /*propiedades somos*/
 .somosTitulo {
   font-weight: 200;
-  padding-left: 2rem;
+  padding: 2rem;
   font-size: 1.7rem; }
 
 .somosMain {
@@ -142,7 +148,7 @@
   .somos h2, .somos1 h2 {
     font-size: 1.4rem; }
   .somos p, .somos1 p {
-    font-size: 1rem; } }
+    font-size: 0.9rem; } }
 
 @media only screen and (min-width: 1200px) {
   .somosTitulo {
@@ -150,7 +156,7 @@
   .somos h2, .somos1 h2 {
     font-size: 1.9rem; }
   .somos p, .somos1 p {
-    font-size: 1.5rem; } }
+    font-size: 1rem; } }
 
 /*propiedades de juegos*/
 .juegosTitulo {
@@ -252,11 +258,11 @@
 
 @media only screen and (min-width: 600px) {
   .desarrolladoresTitulo {
-    font-size: 1.9rem; }
+    font-size: 2rem; }
   .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2 {
     font-size: 1.4rem; }
   .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a {
-    font-size: 1rem; } }
+    font-size: 0.9rem; } }
 
 @media only screen and (min-width: 1200px) {
   .desarrolladoresTitulo {
@@ -264,12 +270,12 @@
   .desarrollador h2, .desarrollador1 h2, .desarrollador2 h2 {
     font-size: 1.9rem; }
   .desarrollador p, .desarrollador1 p, .desarrollador2 p, .desarrollador a, .desarrollador1 a, .desarrollador2 a {
-    font-size: 1.5rem; } }
+    font-size: 1rem; } }
 
 /*propiedades de contacto*/
 .contactoTitulo {
-  font-weight: 200;
   text-align: center;
+  font-weight: 200;
   padding: 2rem;
   font-size: 1.7rem; }
 
@@ -294,17 +300,17 @@
   .contactoTitulo {
     font-size: 1.9rem; }
   .contactoSubtitulo {
-    font-size: 1.7rem; }
+    font-size: 1.4rem; }
   .formPadre div label {
-    font-size: 1.4rem; } }
+    font-size: 0.9rem; } }
 
 @media only screen and (min-width: 1200px) {
   .contactoTitulo {
     font-size: 2.5rem; }
   .contactoSubtitulo {
-    font-size: 2rem; }
+    font-size: 1.9rem; }
   .formPadre div label {
-    font-size: 1.7rem; } }
+    font-size: 1rem; } }
 
 * {
   padding: 0;
@@ -371,17 +377,9 @@
     .base footer h3 {
       font-size: 0.4rem; }
     .base footer .redesFb {
-      position: fixed;
-      bottom: 2rem;
-      right: 1rem;
-      height: 2.5rem;
-      width: 2.5rem; }
+      bottom: 2rem; }
     .base footer .redesInsta {
-      position: fixed;
-      bottom: 5rem;
-      right: 1rem;
-      height: 2.5rem;
-      width: 2.5rem; }
+      bottom: 5rem; }
 
 @media only screen and (min-width: 600px) {
   .base header .menu ul {

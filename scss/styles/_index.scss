@@ -1,8 +1,6 @@
 /*propiedades del index*/
 .indexTitulo{
-    font-weight: 200;
-    padding: 1rem;
-    font-size: 1.7rem;
+    @include tituloMobile;
     text-align: center;
 }
 .indexLogo{
@@ -48,24 +46,24 @@
 
 @media only screen and (min-width: 600px){
     .indexTitulo{
-        font-size: 1.9rem;
+        font-size: nth($size , 1) - 0.1;
     }
     .indexLogo img{
         width: 15rem;
         height: 15rem;
     }
     .indexSubtitulo{
-        font-size: 1.4rem;
+        font-size: nth($size , 2);
     }
     .indexParrafo {
-        font-size: 1rem;
+        font-size: nth($size , 3);
         text-align: center;
     }
 }
 
 @media only screen and (min-width: 1200px){
     .indexTitulo{
-        font-size: 2.5rem;
+        font-size: nth($size , 4);
     }
     .indexLogo img{
         width: 20rem;
@@ -80,13 +78,13 @@
     }
     .indexSubtitulo{
         grid-area: subt;
-        font-size: 1.9rem;
+        font-size: nth($size , 5);
         align-self: center;
     }
     .indexParrafo {
         grid-area: p;
         align-self: start;
-        font-size: 1.5rem;
+        font-size: nth($size , 6);
         text-align: center;
     }
     .indexVideo{

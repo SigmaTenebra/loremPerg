@@ -88,18 +88,12 @@
             font-size: 0.4rem;
         }
         .redesFb{
-            position: fixed;
+            @extend %bot;
             bottom: 2rem;
-            right: 1rem;
-            height: 2.5rem;
-            width: 2.5rem;
         }
         .redesInsta{
-            position: fixed;
+            @extend %bot;
             bottom: 5rem;
-            right: 1rem;
-            height: 2.5rem;
-            width: 2.5rem;
         }
     }
 }

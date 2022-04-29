@@ -1,8 +1,6 @@
 /*propiedades somos*/
 .somosTitulo{
-    font-weight: 200;
-    padding-left: 2rem;
-    font-size: 1.7rem;
+    @include tituloMobile;
 }
 .somosMain{
     padding: 2rem;
@@ -30,24 +28,24 @@
 
 @media only screen and (min-width: 600px){
     .somosTitulo{
-        font-size: 1.9rem;
+        font-size: nth($size , 1) - 0.1;
     }
     .somos h2, .somos1 h2{
-        font-size: 1.4rem;
+        font-size: nth($size , 2);
     }
     .somos p, .somos1 p{
-        font-size: 1rem;
+        font-size: nth($size , 3);
     }
 }
 
 @media only screen and (min-width: 1200px){
     .somosTitulo{
-        font-size: 2.5rem;
+        font-size: nth($size , 4);
     }
     .somos h2, .somos1 h2{
-        font-size: 1.9rem;
+        font-size: nth($size , 5);
     }
     .somos p, .somos1 p{
-        font-size: 1.5rem;
+        font-size: nth($size , 6);
     }
 }
